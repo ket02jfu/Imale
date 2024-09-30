@@ -1,0 +1,133 @@
+@font-face {
+    font-family: 'Manrope Light';
+    src: local('Manrope Light'), url('@/fonts/Manrope-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Manrope Bold';
+    src: local('Manrope Bold'), url('@/fonts/Manrope-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Manrope ExtraBold';
+    src: local('Manrope ExtraBold'), url('@/fonts/Manrope-ExtraBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Manrope ExtraLight';
+    src: local('Manrope ExtraLight'), url('@/fonts/Manrope-ExtraLight.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Manrope Medium';
+    src: local('Manrope Medium'), url('@/fonts/Manrope-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Manrope Regular';
+    src: local('Manrope Regular'), url('@/fonts/Manrope-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Manrope SemiBold';
+    src: local('Manrope SemiBold'), url('@/fonts/Manrope-SemiBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+    user-select: none;
+    -webkit-overflow-scrolling: touch;
+    -webkit-user-select: auto;
+}
+
+*::selection {  
+    color: #ffffff;
+    background: #df3749;
+}
+*::-moz-selection {
+    color: #ffffff;
+    background: #df3749;
+}
+
+html {
+    font-size: 16px;
+    -webkit-text-size-adjust: none;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Manrope Medium';
+    font-style: normal;
+    height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+  
+a {
+    text-decoration: none;
+}
+
+.page{
+    height: 100vh;
+    overflow-y: hidden;
+    display: flex;
+}
+
+img{
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+button, input{
+    outline: none !important;
+}
+
+.main{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.main-container{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 60px 0;
+    gap: 24px;
+    max-width: 1350px;
+    position: relative;
+}
+
+.info{
+    width: 100%;
+}
+
+@media (max-width: 1250px){
+
+}
+
+@media (max-width: 1050px) {
+
+}
+
+@media (max-width: 560px) {
+
+}
