@@ -5,13 +5,13 @@
         </div>
         <hr>
         <nuxt-link to="/" :class="{ active: isActive('/store') }" class="nav-link">Список товаров</nuxt-link>
-        <nuxt-link to="/" :class="{ active: isActive('/warranty') }" class="nav-link">Гарантия и возврат</nuxt-link>
+        <nuxt-link to="/warranty" :class="{ active: isActive('/warranty') }" class="nav-link">Гарантия и возврат</nuxt-link>
         <nuxt-link to="/" :class="{ active: isActive('/orders-history') }" class="nav-link">История заказов</nuxt-link>
         <nuxt-link to="/" :class="{ active: isActive('/profile-edit') }" class="nav-link">Редактирование профиля</nuxt-link>
         <nuxt-link to="/" :class="{ active: isActive('/contacts') }" class="nav-link">Контакты</nuxt-link>
         <nuxt-link to="/" :class="{ active: isActive('/active-orders') }" class="nav-link">Активные заказы</nuxt-link>
-        <nuxt-link to="/welcome/signin" class="nav-link sign">Регистрация</nuxt-link>
-        <nuxt-link to="/welcome/signup" class="nav-link sign">Авторизация</nuxt-link>
+        <nuxt-link to="/welcome/signup" class="nav-link sign">Регистрация</nuxt-link>
+        <nuxt-link to="/welcome/signin" class="nav-link sign">Авторизация</nuxt-link>
     </div>
 </template>
 <script>
@@ -54,29 +54,29 @@ export default {
         object-fit: cover;
     }
 
-    .nav-link{
+    .nav-link {
         color: rgba(128, 128, 128, 0.514);
         font-size: 16px;
         cursor: pointer;
         width: fit-content;
         font-family: 'Manrope Light';
         padding: 6px 8px;
-    }
-    .nav-link:hover{
-        background: -webkit-linear-gradient(3.76deg, #df3749 20.71%, #580000 108.34%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-    }
-    .nav-link.active {
+      }
+      
+      .nav-link:hover {
+        color: #df3749;
+      }
+      
+      .nav-link.active {
         color: white;
         background: #df3749;
         border-radius: 8px;
-    }
-    .nav-link.active:hover {
-        background: #df3749; 
-        color: white;        
-    }
+      }
+      
+      .nav-link.active:hover {
+        background: #df3749;
+        color: white !important;
+      }
     hr{
         width: 100%;
         background: rgba(128, 128, 128, 0.514);

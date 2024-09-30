@@ -10,6 +10,8 @@
             placeholder="Поиск..."
             class="search-input"
             maxlength="256"
+            data-aos="fade-up" 
+            data-aos-delay="100"
           />
         </div>
         <div class="brand-filters">
@@ -19,6 +21,8 @@
             @click="toggleBrandFilter(brand)"
             :class="{ active: selectedBrands.includes(brand) }"
             class="brand-button"
+            data-aos="fade-up" 
+            data-aos-delay="200"
           >
             {{ brand }}
           </button>
@@ -29,7 +33,7 @@
             :key="index"
             :part="part"
             data-aos="fade-up" 
-            data-aos-delay="100"
+            data-aos-delay="300"
           />
         </div>
       </div>
