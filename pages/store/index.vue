@@ -3,17 +3,40 @@
     <div class="main-container">
       <Navigation />
       <div class="info">
+        <div class="search">
+          <input
+            type="text"
+            v-model="searchQuery"
+            placeholder="Поиск..."
+            class="search-input"
+            maxlength="256"
+          />
+        </div>
+        <div class="brand-filters">
+          <button
+            v-for="brand in uniqueBrands"
+            :key="brand"
+            @click="toggleBrandFilter(brand)"
+            :class="{ active: selectedBrands.includes(brand) }"
+            class="brand-button"
+          >
+            {{ brand }}
+          </button>
+        </div>
         <div class="card-grid">
           <Card
-            v-for="(part, index) in autoParts"
+            v-for="(part, index) in filteredAutoParts"
             :key="index"
             :part="part"
+            data-aos="fade-up" 
+            data-aos-delay="100"
           />
         </div>
       </div>
     </div>
   </div>
 </template>
+
 
 <script>
 import Navigation from '@/components/UI/Navigation.vue';
@@ -26,6 +49,8 @@ export default {
   },
   data() {
     return {
+      searchQuery: '',
+      selectedBrands: [],
       autoParts: [
         {
           name: "Brake Pads",
@@ -96,8 +121,102 @@ export default {
           price: "$20",
           description: "All-season windshield wipers for clear vision during heavy rain and snow.",
           // image: "@/images/content-img/store/5.jpg"
+        },
+        {
+          name: "Fuel Injector",
+          brand: "Denso",
+          price: "$75",
+          description: "High-quality fuel injector for optimal engine performance and fuel efficiency.",
+          // image: "@/images/content-img/store/1.jpg"
+        },
+        {
+          name: "Radiator",
+          brand: "Mishimoto",
+          price: "$250",
+          description: "Performance aluminum radiator for efficient engine cooling.",
+          // image: "@/images/content-img/store/2.jpg"
+        },
+        {
+          name: "Timing Belt",
+          brand: "Gates",
+          price: "$80",
+          description: "Durable timing belt designed for precise engine timing and long life.",
+          // image: "@/images/content-img/store/3.jpg"
+        },
+        {
+          name: "Headlights",
+          brand: "Philips",
+          price: "$60",
+          description: "Bright and energy-efficient LED headlights with a long lifespan.",
+          // image: "@/images/content-img/store/4.jpg"
+        },
+        {
+          name: "Windshield Wipers",
+          brand: "Bosch",
+          price: "$20",
+          description: "All-season windshield wipers for clear vision during heavy rain and snow.",
+          // image: "@/images/content-img/store/5.jpg"
+        },
+        {
+          name: "Fuel Injector",
+          brand: "Denso",
+          price: "$75",
+          description: "High-quality fuel injector for optimal engine performance and fuel efficiency.",
+          // image: "@/images/content-img/store/1.jpg"
+        },
+        {
+          name: "Radiator",
+          brand: "Mishimoto",
+          price: "$250",
+          description: "Performance aluminum radiator for efficient engine cooling.",
+          // image: "@/images/content-img/store/2.jpg"
+        },
+        {
+          name: "Timing Belt",
+          brand: "Gates",
+          price: "$80",
+          description: "Durable timing belt designed for precise engine timing and long life.",
+          // image: "@/images/content-img/store/3.jpg"
+        },
+        {
+          name: "Headlights",
+          brand: "Philips",
+          price: "$60",
+          description: "Bright and energy-efficient LED headlights with a long lifespan.",
+          // image: "@/images/content-img/store/4.jpg"
+        },
+        {
+          name: "Windshield Wipers",
+          brand: "Bosch",
+          price: "$20",
+          description: "All-season windshield wipers for clear vision during heavy rain and snow.",
+          // image: "@/images/content-img/store/5.jpg"
         }
       ]
+    }
+  },
+  computed: {
+    uniqueBrands() {
+      const brands = this.autoParts.map(part => part.brand);
+      return [...new Set(brands)];
+    },
+    filteredAutoParts() {
+      const query = this.searchQuery.toLowerCase();
+      return this.autoParts.filter(part => {
+        const matchesSearch = part.name.toLowerCase().includes(query) || part.brand.toLowerCase().includes(query);
+        const matchesBrand = this.selectedBrands.length === 0 || this.selectedBrands.includes(part.brand);
+        return matchesSearch && matchesBrand;
+      });
+    }
+  },
+  methods: {
+    toggleBrandFilter(brand) {
+      const index = this.selectedBrands.indexOf(brand);
+      if (index === -1) {
+        this.selectedBrands.push(brand); 
+      } else {
+        this.selectedBrands.splice(index, 1); 
+      }
     }
   }
 }
@@ -110,5 +229,46 @@ export default {
   flex-direction: row;
   flex-wrap: wrap;
   gap: 16px;
+}
+.search-input {
+  padding: 16px;
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 16px;
+  border: none;
+  outline: none;
+  border-radius: 16px;
+  background: var(--background-gray, #f8f9fc);
+  font-size: 21px;
+}
+
+.search-input::placeholder{
+  color: rgba(128, 128, 128, 0.428);
+}
+
+.brand-filters {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.brand-button {
+  padding: 8px 12px;
+  background: var(--background-gray, #f8f9fc);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all .3s ease;
+}
+.brand-button:hover{
+  background-color: #df3749;
+  color: white;
+}
+
+.brand-button.active {
+  background-color: #df3749;
+  color: white;
 }
 </style>

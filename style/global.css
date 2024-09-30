@@ -110,7 +110,7 @@ button, input{
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    padding: 60px 0;
+    padding: 24px 0;
     gap: 24px;
     max-width: 1350px;
     position: relative;

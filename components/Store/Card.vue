@@ -63,7 +63,7 @@ p {
 
 span {
   font-size: 12px;
-  color: #777;
+  color: #df3749;
   padding: 0 16px;
 }
 
