@@ -33,10 +33,10 @@ export default {
         gap: 8px;
         z-index: 200;
         box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.08);
-
         position: sticky;
         position: -webkit-sticky;
         top: 24px;
+        margin-top: 70px;
     }
 
     .logo{

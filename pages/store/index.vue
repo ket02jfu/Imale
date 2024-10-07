@@ -1,6 +1,7 @@
 <template>
   <div class="main">
     <div class="main-container">
+      <Header/>
       <Navigation />
       <div class="info">
         <div class="search">
@@ -44,11 +45,13 @@
 
 <script>
 import Navigation from '@/components/UI/Navigation.vue';
+import Header from '@/components/UI/Header.vue';
 import Card from '@/components/Store/Card.vue';
 export default {
   name: 'BlockPage',
   components: {
     Navigation,
+    Header,
     Card
   },
   data() {

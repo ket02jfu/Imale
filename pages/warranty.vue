@@ -2,6 +2,7 @@
   <div class="main">
     <div class="main-container">
       <Navigation />
+      <Header/>
       <div class="info">
         <div class="title" data-aos="fade-up" data-aos-delay="100">Гарантийные обязательства и условия возврата/обмена товаров</div>
         <div class="sub" data-aos="fade-up" data-aos-delay="200">
@@ -69,9 +70,11 @@
 </template>
 <script>
   import Navigation from '@/components/UI/Navigation.vue';
+  import Header from '@/components/UI/Header.vue';
   export default {
     components: {
       Navigation,
+      Header
     },
   }
 
