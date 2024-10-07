@@ -4,14 +4,12 @@
             <img src="@/public/images/content-img/logo.png" alt="">
         </div>
         <hr>
+        <nuxt-link to="/" :class="{ active: isActive('/active-orders') }" class="nav-link">Активные заказы</nuxt-link>
+        <nuxt-link to="/" :class="{ active: isActive('/orders-history') }" class="nav-link">История заказов</nuxt-link>
+        <nuxt-link to="/contacts" :class="{ active: isActive('/contacts') }" class="nav-link">Контакты</nuxt-link>
+        <nuxt-link to="/partners" :class="{ active: isActive('/partners') }" class="nav-link">Партнеры</nuxt-link>
         <nuxt-link to="/" :class="{ active: isActive('/store') }" class="nav-link">Список товаров</nuxt-link>
         <nuxt-link to="/warranty" :class="{ active: isActive('/warranty') }" class="nav-link">Гарантия и возврат</nuxt-link>
-        <nuxt-link to="/" :class="{ active: isActive('/orders-history') }" class="nav-link">История заказов</nuxt-link>
-        <nuxt-link to="/" :class="{ active: isActive('/profile-edit') }" class="nav-link">Редактирование профиля</nuxt-link>
-        <nuxt-link to="/" :class="{ active: isActive('/contacts') }" class="nav-link">Контакты</nuxt-link>
-        <nuxt-link to="/" :class="{ active: isActive('/active-orders') }" class="nav-link">Активные заказы</nuxt-link>
-        <nuxt-link to="/welcome/signup" class="nav-link sign">Регистрация</nuxt-link>
-        <nuxt-link to="/welcome/signin" class="nav-link sign">Авторизация</nuxt-link>
     </div>
 </template>
 <script>
