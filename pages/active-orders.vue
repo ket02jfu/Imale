@@ -50,6 +50,7 @@ export default {
           date: '23.10.2024',
           status: 'Active',
           price: 200,
+          id: 1
         },
         {
           name: 'Oil Filter',
@@ -59,6 +60,7 @@ export default {
           date: '22.10.2024',
           status: 'Archive',
           price: 100,
+          id: 2
         },
         {
           name: 'Car Battery',
@@ -68,6 +70,7 @@ export default {
           date: '21.10.2024',
           status: 'Active',
           price: 150,
+          id: 3
         },
       ],
     };

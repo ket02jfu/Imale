@@ -60,125 +60,75 @@ export default {
       selectedBrands: [],
       autoParts: [
         {
+          id: 1,
           name: "Brake Pads",
           brand: "Brembo",
           description: "High-performance brake pads with superior stopping power and durability.",
           image: "1.jpg"
         },
         {
+          id: 2,
           name: "Oil Filter",
           brand: "Bosch",
           description: "Bosch oil filters designed for extended performance and engine protection.",
           // image: "@/images/content-img/store/2.jpg"
         },
         {
+          id: 3,
           name: "Car Battery",
           brand: "Exide",
           description: "Long-lasting and maintenance-free car battery for all types of vehicles.",
           // image: "@/images/content-img/store/3.jpg"
         },
         {
+          id: 4,
           name: "Spark Plugs",
           brand: "NGK",
           description: "Iridium spark plugs for efficient combustion and fuel economy.",
           // image: "@/images/content-img/store/4.jpg"
         },
         {
+          id: 5,
           name: "Air Filter",
           brand: "K&N",
           description: "Reusable air filter that increases airflow and engine performance.",
           // image: "@/images/content-img/store/5.jpg"
         },
         {
+          id: 6,
           name: "Fuel Injector",
           brand: "Denso",
           description: "High-quality fuel injector for optimal engine performance and fuel efficiency.",
           // image: "@/images/content-img/store/1.jpg"
         },
         {
+          id: 7,
           name: "Radiator",
           brand: "Mishimoto",
           description: "Performance aluminum radiator for efficient engine cooling.",
           // image: "@/images/content-img/store/2.jpg"
         },
         {
+          id: 8,
           name: "Timing Belt",
           brand: "Gates",
           description: "Durable timing belt designed for precise engine timing and long life.",
           // image: "@/images/content-img/store/3.jpg"
         },
         {
+          id: 9,
           name: "Headlights",
           brand: "Philips",
           description: "Bright and energy-efficient LED headlights with a long lifespan.",
           // image: "@/images/content-img/store/4.jpg"
         },
         {
+          id: 10,
           name: "Windshield Wipers",
           brand: "Bosch",
           description: "All-season windshield wipers for clear vision during heavy rain and snow.",
           // image: "@/images/content-img/store/5.jpg"
         },
-        {
-          name: "Fuel Injector",
-          brand: "Denso",
-          description: "High-quality fuel injector for optimal engine performance and fuel efficiency.",
-          // image: "@/images/content-img/store/1.jpg"
-        },
-        {
-          name: "Radiator",
-          brand: "Mishimoto",
-          description: "Performance aluminum radiator for efficient engine cooling.",
-          // image: "@/images/content-img/store/2.jpg"
-        },
-        {
-          name: "Timing Belt",
-          brand: "Gates",
-          description: "Durable timing belt designed for precise engine timing and long life.",
-          // image: "@/images/content-img/store/3.jpg"
-        },
-        {
-          name: "Headlights",
-          brand: "Philips",
-          description: "Bright and energy-efficient LED headlights with a long lifespan.",
-          // image: "@/images/content-img/store/4.jpg"
-        },
-        {
-          name: "Windshield Wipers",
-          brand: "Bosch",
-          description: "All-season windshield wipers for clear vision during heavy rain and snow.",
-          // image: "@/images/content-img/store/5.jpg"
-        },
-        {
-          name: "Fuel Injector",
-          brand: "Denso",
-          description: "High-quality fuel injector for optimal engine performance and fuel efficiency.",
-          // image: "@/images/content-img/store/1.jpg"
-        },
-        {
-          name: "Radiator",
-          brand: "Mishimoto",
-          description: "Performance aluminum radiator for efficient engine cooling.",
-          // image: "@/images/content-img/store/2.jpg"
-        },
-        {
-          name: "Timing Belt",
-          brand: "Gates",
-          description: "Durable timing belt designed for precise engine timing and long life.",
-          // image: "@/images/content-img/store/3.jpg"
-        },
-        {
-          name: "Headlights",
-          brand: "Philips",
-          description: "Bright and energy-efficient LED headlights with a long lifespan.",
-          // image: "@/images/content-img/store/4.jpg"
-        },
-        {
-          name: "Windshield Wipers",
-          brand: "Bosch",
-          description: "All-season windshield wipers for clear vision during heavy rain and snow.",
-          // image: "@/images/content-img/store/5.jpg"
-        }
       ]
     }
   },

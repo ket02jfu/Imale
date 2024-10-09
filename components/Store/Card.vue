@@ -1,5 +1,5 @@
 <template>
-  <div class="card-container">
+  <nuxt-link :to="`/store/info?id=${part.id}`" class="card-container">
     <div class="img">
         <!-- <img :src="require(`@/public/images/content-img/store/${part.image}`)" :alt="part.name" class="card-image" > -->
         <img src="@/public/images/content-img/store/1.jpg" alt="" :alt="part.name" class="card-image" >
@@ -8,7 +8,7 @@
     <p>{{ part.description }}</p>
     <span>{{ part.brand }}</span>
     <strong>{{ part.price }}</strong>
-  </div>
+  </nuxt-link>
 </template>
 
 <script>
@@ -53,6 +53,7 @@ h3 {
   font-size: 18px;
   margin: 8px 0;
   padding: 0 16px;
+  color: black;
 }
 
 p {

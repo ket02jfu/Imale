@@ -49,6 +49,7 @@
             image: '1.jpg',
             date: '23.10.2024',
             price: 200,
+            id: 1
           },
           {
             name: 'Oil Filter',
@@ -57,6 +58,7 @@
             image: '1.jpg',
             date: '22.10.2024',
             price: 100,
+            id: 2
           },
           {
             name: 'Car Battery',
@@ -65,6 +67,7 @@
             image: '1.jpg',
             date: '21.10.2024',
             price: 150,
+            id: 3
           },
         ],
       };

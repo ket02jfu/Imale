@@ -1,5 +1,5 @@
 <template>
-  <div class="card-container">
+  <nuxt-link :to="`/store/info?id=${part.id}`" class="card-container">
     <div class="img">
       <img src="@/public/images/content-img/store/3.jpg" alt="" :alt="part.name" class="card-image" >
     </div>
@@ -15,7 +15,7 @@
         {{ part.date }}
       </div>
     </div>
-  </div>
+  </nuxt-link>
 </template>
 
 
@@ -62,6 +62,7 @@ h3 {
   font-size: 18px;
   margin: 8px 0;
   padding: 0 16px;
+  color: black;
 }
 
 p {
