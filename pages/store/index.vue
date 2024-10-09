@@ -225,7 +225,7 @@ export default {
   border: none;
   outline: none;
   border-radius: 16px;
-  background: var(--background-gray, #f8f9fc);
+  background: var(--background-gray, #edeef3);
   font-size: 21px;
 }
 

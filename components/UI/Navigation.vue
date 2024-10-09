@@ -4,8 +4,8 @@
             <img src="@/public/images/content-img/logo.png" alt="">
         </div>
         <hr>
-        <nuxt-link to="/" :class="{ active: isActive('/active-orders') }" class="nav-link">Активные заказы</nuxt-link>
-        <nuxt-link to="/" :class="{ active: isActive('/orders-history') }" class="nav-link">История заказов</nuxt-link>
+        <nuxt-link to="/active-orders" :class="{ active: isActive('/active-orders') }" class="nav-link">Активные заказы</nuxt-link>
+        <nuxt-link to="/orders-history" :class="{ active: isActive('/orders-history') }" class="nav-link">История заказов</nuxt-link>
         <nuxt-link to="/contacts" :class="{ active: isActive('/contacts') }" class="nav-link">Контакты</nuxt-link>
         <nuxt-link to="/partners" :class="{ active: isActive('/partners') }" class="nav-link">Партнеры</nuxt-link>
         <nuxt-link to="/" :class="{ active: isActive('/store') }" class="nav-link">Список товаров</nuxt-link>
