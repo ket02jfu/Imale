@@ -7,7 +7,7 @@
           <div class="title" data-aos="fade-up" data-aos-delay="100">Профиль</div>
           <div class="profile-info">
             <div class="profile-field" v-for="(field, key) in fields" :key="key" data-aos="fade-up" data-aos-delay="200">
-              <label :for="key">{{ field.label }}</label>
+              <label class="profile-label" :for="key">{{ field.label }}</label>
               <input
                 type="text"
                 :id="key"
@@ -18,6 +18,18 @@
             <button class="save-button" @click="saveProfile" data-aos="fade-up" data-aos-delay="200">
                 Сохранить
             </button>
+          </div>
+          <div class="checkbox-container" data-aos="fade-up" data-aos-delay="300">
+            <input
+              type="checkbox"
+              id="wholesale"
+              v-model="isWholesaleBuyer"
+              disabled
+            />
+            <label class="buyer-label" for="wholesale">Оптовый покупатель</label>
+            <a v-if="!isWholesaleBuyer" href="#" class="wholesale-link">
+              Стать оптовым покупателем
+            </a>
           </div>
         </div>
       </div>
@@ -42,6 +54,7 @@
           email: { label: 'Почта', value: '' },
           phone: { label: 'Телефон', value: '' },
         },
+        isWholesaleBuyer: false,
       };
     },
     methods: {
@@ -71,7 +84,7 @@
     gap: 16px;
   }
   
-  label {
+  .profile-label {
     width: 150px;
     font-size: 21px;
     color: gray;
@@ -121,6 +134,29 @@
   
   .save-button:hover {
     background-color: #b82d3b;
+  }
+
+  .checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 48px;
+  }
+  
+  .wholesale-link {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .wholesale-link:hover {
+    text-decoration: underline;
+  }
+
+  .buyer-label{
+    font-size: 21px;
+    color: gray;
+    font-family: 'Manrope Light';
   }
   </style>
   
