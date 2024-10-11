@@ -6,7 +6,7 @@
     <h3>{{ part.name }}</h3>
     <p>{{ part.description }}</p>
     <span>{{ part.brand }}</span>
-    <strong>{{ part.price }}</strong>
+    <strong>{{ part.price }} ₸</strong>
     <div class="status-container">
       <div class="status" :class="{'active': part.status === 'Active', 'archive': part.status === 'Archive'}">
         {{ part.status === 'Active' ? 'Активный' : 'Архив' }}
