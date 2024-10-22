@@ -21,7 +21,7 @@ export default {
 
 <style scoped>
 .card-container {
-  width: calc(100% / 3 - 12px);
+  width: calc(100% / 4 - 12px);
   height: auto;
   background: var(--background-gray, #f8f9fc);
   border-radius: 16px;

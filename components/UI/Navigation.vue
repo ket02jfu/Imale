@@ -42,8 +42,8 @@ export default {
     .logo{
         border-radius: 16px;
         overflow: hidden;
-        width: 220px;
-        height: 220px;
+        width: 170px;
+        height: 170px;
     }
 
     .logo img{

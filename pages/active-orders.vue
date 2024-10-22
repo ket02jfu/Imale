@@ -6,8 +6,11 @@
       <div class="info">
         <div class="search">
 
-          <input type="text" v-model="searchQuery" placeholder="Поиск..." class="search-input" maxlength="256"
-            data-aos="fade-up" data-aos-delay="100" />
+          <div class="input-container" data-aos="fade-up" data-aos-delay="100">
+            <input type="text" id="input" required="" v-model="searchQuery" maxlength="256">
+            <label for="input" class="label">Поиск</label>
+            <div class="underline"></div>
+          </div>
 
           <button @click="toggleSortOrder" class="sort-button" data-aos="fade-up" data-aos-delay="100">
             <span>Сортировать по дате</span>
@@ -118,9 +121,8 @@ export default {
 
   .search {
     display: flex;
-    align-items: center;
-    gap: 16px;
-    margin-bottom: 16px;
+    flex-direction: column;
+    margin-bottom: 24px;
   }
 
   .search-input {
@@ -146,6 +148,7 @@ export default {
     cursor: pointer;
     font-size: 16px;
     color: #000;
+    width: fit-content;
   }
   
   .sort-icon {

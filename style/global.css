@@ -1,134 +1,252 @@
 @font-face {
-    font-family: 'Manrope Light';
-    src: local('Manrope Light'), url('@/fonts/Manrope-Light.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'Manrope Light';
+  src: local('Manrope Light'), url('@/fonts/Manrope-Light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
+
 @font-face {
-    font-family: 'Manrope Bold';
-    src: local('Manrope Bold'), url('@/fonts/Manrope-Bold.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'Manrope Bold';
+  src: local('Manrope Bold'), url('@/fonts/Manrope-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
+
 @font-face {
-    font-family: 'Manrope ExtraBold';
-    src: local('Manrope ExtraBold'), url('@/fonts/Manrope-ExtraBold.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'Manrope ExtraBold';
+  src: local('Manrope ExtraBold'), url('@/fonts/Manrope-ExtraBold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
+
 @font-face {
-    font-family: 'Manrope ExtraLight';
-    src: local('Manrope ExtraLight'), url('@/fonts/Manrope-ExtraLight.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'Manrope ExtraLight';
+  src: local('Manrope ExtraLight'), url('@/fonts/Manrope-ExtraLight.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
+
 @font-face {
-    font-family: 'Manrope Medium';
-    src: local('Manrope Medium'), url('@/fonts/Manrope-Medium.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'Manrope Medium';
+  src: local('Manrope Medium'), url('@/fonts/Manrope-Medium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
+
 @font-face {
-    font-family: 'Manrope Regular';
-    src: local('Manrope Regular'), url('@/fonts/Manrope-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'Manrope Regular';
+  src: local('Manrope Regular'), url('@/fonts/Manrope-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
+
 @font-face {
-    font-family: 'Manrope SemiBold';
-    src: local('Manrope SemiBold'), url('@/fonts/Manrope-SemiBold.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'Manrope SemiBold';
+  src: local('Manrope SemiBold'), url('@/fonts/Manrope-SemiBold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 * {
-    box-sizing: border-box;
-    user-select: none;
-    -webkit-overflow-scrolling: touch;
-    -webkit-user-select: auto;
+  box-sizing: border-box;
+  user-select: none;
+  -webkit-overflow-scrolling: touch;
+  -webkit-user-select: auto;
 }
 
-*::selection {  
-    color: #ffffff;
-    background: #df3749;
+*::selection {
+  color: #ffffff;
+  background: #df3749;
 }
+
 *::-moz-selection {
-    color: #ffffff;
-    background: #df3749;
+  color: #ffffff;
+  background: #df3749;
 }
 
 html {
-    font-size: 16px;
-    -webkit-text-size-adjust: none;
+  font-size: 16px;
+  -webkit-text-size-adjust: none;
 }
 
 body {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Manrope Medium';
-    font-style: normal;
-    height: 100vh;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Manrope Medium';
+  font-style: normal;
+  height: 100vh;
+
+  background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url(@/public/images/content-img/main-bg.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
-h1, h2, h3, h4, h5, h6, p {
-    margin: 0;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
 }
-  
+
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
-.page{
-    height: 100vh;
-    overflow-y: hidden;
-    display: flex;
+.page {
+  height: 100vh;
+  overflow-y: hidden;
+  display: flex;
 }
 
-img{
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+img {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
-button, input{
-    outline: none !important;
+button,
+input {
+  outline: none !important;
 }
 
-.main{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.main {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.main-container {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 24px 0;
+  gap: 24px;
+  max-width: 1350px;
+  position: relative;
+}
+
+.info {
+  width: 100%;
+  padding-top: 70px;
+}
+
+.input-container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 24px;
+}
+
+.input-container input[type="text"] {
+  font-size: 21px;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  padding: 10px 0;
+  background-color: transparent;
+  outline: none;
+}
+
+.input-container .label {
+  position: absolute;
+  top: 5px;
+  left: 0;
+  color: #ccc;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.input-container input[type="text"]:focus~.label,
+.input-container input[type="text"]:valid~.label {
+  top: -20px;
+  font-size: 16px;
+  color: #df3749;
+}
+
+.input-container .underline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #df3749;
+  transform: scaleX(0);
+  transition: all 0.3s ease;
+}
+
+.input-container input[type="text"]:focus~.underline,
+.input-container input[type="text"]:valid~.underline {
+  transform: scaleX(1);
+}
+
+.filter-search-button {
+    font-family: inherit;
+    display: inline-block;
+    width: auto;
+    height: auto;
+    padding: 4px 15px;
     position: relative;
-}
+    cursor: pointer;
+    overflow: hidden;
+    border: 2px solid #df3749;
+    transition: color 0.5s;
+    z-index: 1;
+    font-size: 17px;
+    border-radius: 6px;
+    font-weight: 500;
+    color: #df3749;
+    background: white;
+  }
 
-.main-container{
-    width: 100%;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    padding: 24px 0;
-    gap: 24px;
-    max-width: 1350px;
-    position: relative;
-}
+  .filter-search-button:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background: #df3749;
+    height: 120px;
+    width: 180px;
+    border-radius: 50%;
+    top: 100%;
+    left: 100%;
+    transition: all 0.7s;
+  }
 
-.info{
-    width: 100%;
-    padding-top: 70px;
-}
+  .filter-search-button:hover,
+  .filter-search-button.active { 
+    color: #fff;
+  }
 
-@media (max-width: 1250px){
+  .filter-search-button:hover:before,
+  .filter-search-button.active:before { 
+    top: -30px;
+    left: -30px;
+  }
 
-}
+  .filter-search-button:hover:before {
+    top: -30px;
+    left: -30px;
+  }
 
-@media (max-width: 1050px) {
+  .filter-search-button:active:before {
+    background: #df3749;
+    transition: background 0s;
+  }
 
-}
 
-@media (max-width: 560px) {
 
-}
+@media (max-width: 1250px) {}
+
+@media (max-width: 1050px) {}
+
+@media (max-width: 560px) {}

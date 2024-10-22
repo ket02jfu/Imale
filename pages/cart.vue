@@ -17,17 +17,9 @@
 
         </div>
         <div class="payment-filters" data-aos="fade-up" data-aos-delay="200">
-          <button @click="resetPaymentFilter" class="payment-button" :class="{ active: selectedPayment === null }">
-            Все
-          </button>
-          <button @click="togglePaymentFilter('paid')" :class="{ active: selectedPayment === 'paid' }"
-            class="payment-button">
-            Оплаченные
-          </button>
-          <button @click="togglePaymentFilter('unpaid')" :class="{ active: selectedPayment === 'unpaid' }"
-            class="payment-button">
-            Отмененные
-          </button>
+          <button @click="resetPaymentFilter" class="filter-search-button" :class="{ active: selectedPayment === null }">Все</button>
+          <button @click="togglePaymentFilter('paid')" class="filter-search-button" :class="{ active: selectedPayment === 'paid' }">Оплаченные</button>
+          <button @click="togglePaymentFilter('unpaid')" class="filter-search-button" :class="{ active: selectedPayment === 'unpaid' }">Отмененные</button>
         </div>
         <div class="card-grid">
           <Card v-for="(part, index) in filteredAutoParts" :key="index" :part="part" data-aos="fade-up"
@@ -194,24 +186,4 @@
     gap: 16px;
     margin-bottom: 16px;
   }
-
-  .payment-button {
-    padding: 8px 12px;
-    background: var(--background-gray, #f8f9fc);
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all .3s ease;
-  }
-
-  .payment-button:hover {
-    background-color: #df3749;
-    color: white;
-  }
-
-  .payment-button.active {
-    background-color: #df3749;
-    color: white;
-  }
-
 </style>
